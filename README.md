@@ -43,3 +43,20 @@ Once you have the code, it can be installed from your repository as well:
 ```
 
 There, you're ready to use the MQTT tools and start to develop your project wit the Paho Mqtt layer.
+
+# Install Mosquitto (Broker MQTT)
+To install a mqtt broker mosquitto on a raspberry device. To proceed:
+```bash
+  sudo apt update
+  sudo apt install -y mosquitto mosquitto-clients
+```
+
+You’ll have to type Y and press Enter to confirm the installation. To make Mosquitto auto start on boot up enter:
+```bash
+  sudo systemctl enable mosquitto.service
+```
+
+To test the installation, send the command:
+```bash
+  mosquitto -v
+```
