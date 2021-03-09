@@ -84,4 +84,22 @@ We subscribe to the "#" topic, this mean that all message received from the brok
   client.subscribe("#")
 ```
 
-Now you can use directly your temrminal and Mosquitto to publich something on your broker. To proceed, enter the following command line to Publish directly on your broker and then, the result will display in the reveive part of your **testmqtt.py** program.
+Run your python program:
+```bash
+   sudo python3 testmqtt.py
+```
+
+Now you can use directly your temrminal and Mosquitto to publich something on your broker. To proceed, enter the following command line to Publish directly on your broker and then, the result will display in the reveive part of your **testmqtt.py** program. For this test, we try to publish on the **localhost** broker and send on the topic ***test/mosquitto/topic*** the message (in the payload) : ***hello world, testing my mosquitto broker***:
+```bash
+   mosquitto_pub -h 127.0.0.1 -m "hello world, testing my mosquitto broker" -t test/mosquitto/topic -d
+```
+
+Your program will display new data received :
+```bash
+==========NEW DATA RECEIVED==========
+Topic :  test/mosquitto/topic
+Payload :  b'hello world, testing my mosquitto broker'
+```
+
+Now you're ready to work with a local MQTT Broker! 
+
